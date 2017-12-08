@@ -5,7 +5,7 @@ Via Composer
 ```json
 {
     "require": {
-        "sevenecks/ansi": "0.*"
+        "sevenecks/ansi": "1.0.*"
     }
 }
 ```
