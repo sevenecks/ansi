@@ -5,7 +5,7 @@ Via Composer
 ```json
 {
     "require": {
-        "kevinlebrun/colors.php": "0.*"
+        "sevenecks/ansi": "0.*"
     }
 }
 ```
