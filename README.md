@@ -25,6 +25,7 @@ composer require sevenecks/ansi
 require_once __DIR__ . '/vendor/autoload.php';
 
 use SevenEcks\Ansi\Colorize;
+```
 
 ## License
 
