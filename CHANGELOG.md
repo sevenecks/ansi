@@ -1,3 +1,7 @@
+## 1.0.1 - 2017-12-11 1:40PM
+
+- Updated ReadMe examples
+
 ## 1.0.0 - 2017-12-08 1:47PM
 
 - Initial release
