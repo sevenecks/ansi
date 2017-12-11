@@ -20,11 +20,15 @@ composer require sevenecks/ansi
 ## Usage
 
 ```php
-<?php
-
 require_once __DIR__ . '/vendor/autoload.php';
-
 use SevenEcks\Ansi\Colorize;
+
+$test_string = 'This is a test';
+
+echo Colorize::cyan($test_string) . "\n";
+echo Colorize::bgRed($test_string) . "\n";
+// background color first
+echo Colorize::cyan(Colorize::bgRed($test_string)) . "\n";
 ```
 
 ## License
