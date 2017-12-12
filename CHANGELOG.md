@@ -1,3 +1,7 @@
+## 1.0.2 - 2017-12-12 11:54PM
+
+- Updated README.md
+
 ## 1.0.1 - 2017-12-11 1:40PM
 
 - Updated ReadMe examples

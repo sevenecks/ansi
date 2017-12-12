@@ -31,6 +31,9 @@ echo Colorize::bgRed($test_string) . "\n";
 echo Colorize::cyan(Colorize::bgRed($test_string)) . "\n";
 ```
 
+## Change Log
+Please see [Change Log](CHANGELOG.md) for more information.
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
