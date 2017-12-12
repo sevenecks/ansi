@@ -1,3 +1,7 @@
+## 1.0.3 - 2017-12-12- 12:24PM
+
+- Updated README.md with list of available colors and example of manually colorizing a string
+
 ## 1.0.2 - 2017-12-12 11:54PM
 
 - Updated README.md
