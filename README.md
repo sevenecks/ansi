@@ -95,7 +95,7 @@ public static function bgBlue($text)
 public static function bgMagenta($text)
 public static function bgCyan($text)
 public static function bgLightGray($text)
-
+```
 ## Change Log
 Please see [Change Log](CHANGELOG.md) for more information.
 
