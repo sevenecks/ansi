@@ -1,11 +1,9 @@
 ## Installation
-
 ```bash
 composer require sevenecks/ansi
 ```
 
 ## Usage
-
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
 use SevenEcks\Ansi\Colorize;
@@ -21,11 +19,9 @@ echo Colorize::colorizeString("TEST STRING", Colorize::$FOREGROUND_BLUE);
 ```
 
 ## Colors
-
 There are several colors available for foreground and background.
 
 ### Foreground
-
 Colorize::darkGray
 
 Colorize::blue
@@ -42,28 +38,39 @@ Colorize::lightCyan
 
 Colorize::red
 
-Colorize::lightRed 
+Colorize::lightRed
+
 Colorize::purple 
+
 Colorize::lightPurple
+
 Colorize::brown
+
 Colorize::yellow
+
 Colorize::lightGray
+
 Colorize::white
 
 ### Background
-
 Colorize::bgBlack
+
 Colorize::bgRed
+
 Colorize::bgGreen
+
 Colorize::bgYellow
+
 Colorize::bgBlue
+
 Colorize::bgMagenta
+
 Colorize::bgCyan
+
 Colorize::bgLightGray
 
 ## Change Log
 Please see [Change Log](CHANGELOG.md) for more information.
 
 ## License
-
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
