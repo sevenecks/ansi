@@ -27,15 +27,23 @@ There are several colors available for foreground and background.
 ### Foreground
 
 Colorize::darkGray
+
 Colorize::blue
+
 Colorize::lightBlue
+
 Colorize::green
+
 Colorize::lightGreen
+
 Colorize::cyan
+
 Colorize::lightCyan
+
 Colorize::red
-Colorize::lightRed
-Colorize::purple
+
+Colorize::lightRed 
+Colorize::purple 
 Colorize::lightPurple
 Colorize::brown
 Colorize::yellow
