@@ -1,4 +1,12 @@
-## 1.0.3 - 2017-12-12- 12:24PM
+## 1.0.4 - 2018-03-16 5:08PM
+
+- Updated README.md with new methods
+- Added ability ot instantiate class and dynamically call any static methods
+- Added ColorInterface which Colorize implements
+- Changes make the class sutiable for dependency injection
+- Updated composer dependencies to remove PHPUnit since it wasn't being used
+
+## 1.0.3 - 2017-12-12 12:24PM
 
 - Updated README.md with list of available colors and example of manually colorizing a string
 

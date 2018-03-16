@@ -4,7 +4,12 @@
 composer require sevenecks/ansi
 ```
 
-## Usage
+## Colorize
+
+### Usage
+
+#### Static Usage
+The methods on Colorize can be called statically and the full API is listed later. 
 
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
@@ -20,11 +25,26 @@ echo Colorize::cyan(Colorize::bgRed($test_string)) . "\n";
 echo Colorize::colorizeString("TEST STRING", Colorize::$FOREGROUND_BLUE);
 ```
 
-## Colors
+#### Instantiated Usage
+Colorize also supports a magic method that will allow you to call the static methods dynamically, if you want to instantiate the Colorize class. This can be useful for dependency injection.
+
+```php
+require_once __DIR__ . '/vendor/autoload.php';
+use SevenEcks\Ansi\Colorize;
+
+$test_string = 'This is a test';
+
+$colorize = new Colorize;
+
+echo $color->red('tester');
+echo $color->darkGray('testy mctesterson');
+```
+
+### Colors
 
 There are several colors available for foreground and background.
 
-### Foreground
+#### Foreground
 
 Colorize::darkGray
 Colorize::blue
@@ -42,7 +62,7 @@ Colorize::yellow
 Colorize::lightGray
 Colorize::white
 
-### Background
+#### Background
 
 Colorize::bgBlack
 Colorize::bgRed
@@ -52,6 +72,10 @@ Colorize::bgBlue
 Colorize::bgMagenta
 Colorize::bgCyan
 Colorize::bgLightGray
+
+## ColorInterface
+
+You can use the ColorInterface.php file to implement your own ANSI Colorization class. The interface requires all the functions that the Colorize class implements, but does not care about how you define your colors or what is going on below the hood.
 
 ## Change Log
 Please see [Change Log](CHANGELOG.md) for more information.

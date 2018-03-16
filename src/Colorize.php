@@ -1,12 +1,14 @@
 <?php
 namespace SevenEcks\Ansi;
 
+use SevenEcks\Ansi\ColorInterface;
+
 /**
  * Utilities for dealing with ansi within PHP. Useful for colorizing terminal output.
  *
- * @author Brendan Butts <sevenecks@gmail.com>
+ * @author Brendan Butts <bbutts@stormcode.net>
  */
-class Colorize {
+class Colorize implements ColorInterface {
     //foreground colors
     public static $FOREGROUND_BLACK = '0;30';
     public static $FOREGROUND_DARK_GRAY = '1;30';
@@ -34,6 +36,19 @@ class Colorize {
     public static $BACKGROUND_MAGENTA = '45';
     public static $BACKGROUND_CYAN = '46';
     public static $BACKGROUND_LIGHT_GRAY = '47'; 
+
+    /**
+     * Dynamically call the static methods from instance variables
+     * and provide the correct arguments as needed
+     *
+     * @param string $name
+     * @param array $arguments
+     * @return string
+     */
+    public function __call($name, $arguments)
+    {
+        return self::$name(...$arguments);
+    }
 
     /**
      * Colorize a string of text and return it
@@ -311,8 +326,6 @@ class Colorize {
     {
        return self::colorizeString($text, self::$BACKGROUND_LIGHT_GRAY); 
     }
-
-
 }
 
 ?>
