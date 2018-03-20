@@ -1,3 +1,7 @@
+## 1.0.6 - 2018-03-20 3:49PM
+
+- Removed tests since they were unused
+
 ## 1.0.5 - 2018-03-16 5:13PM
 
 - Added ability ot instantiate class and dynamically call any static methods
