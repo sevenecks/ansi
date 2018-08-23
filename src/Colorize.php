@@ -26,6 +26,10 @@ class Colorize implements ColorInterface {
     public static $FOREGROUND_YELLOW = '1;33';
     public static $FOREGROUND_LIGHT_GRAY = '0;37';
     public static $FOREGROUND_WHITE = '1;37';
+    public static $FOREGROUND_BOLD = '1';
+    public static $FOREGROUND_UNDERLINE = '4';
+    public static $FOREGROUND_ITALIC = '3'; 
+    public static $FOREGROUND_INVERT = '7';
 
     // background colors 
     public static $BACKGROUND_BLACK = '40';
@@ -40,6 +44,8 @@ class Colorize implements ColorInterface {
     /**
      * Dynamically call the static methods from instance variables
      * and provide the correct arguments as needed
+     *
+     * @TODO make this check if the function actually exists
      *
      * @param string $name
      * @param array $arguments
@@ -61,6 +67,50 @@ class Colorize implements ColorInterface {
     public static function colorizeString($text, $color) 
     {
         return "\033[" . $color . "m" . $text . "\033[0m";
+    }
+
+    /**
+     * invert the foreground of a string
+     *
+     * @param string $text
+     * @return string
+     */
+    public static function invert($text)
+    {
+       return self::colorizeString($text, self::$FOREGROUND_INVERT);
+    }
+
+    /**
+     * bold the foreground of a string
+     *
+     * @param string $text
+     * @return string
+     */
+    public static function bold($text)
+    {
+       return self::colorizeString($text, self::$FOREGROUND_BOLD); 
+    }
+
+    /**
+     * Italic the foreground of a string
+     *
+     * @param string $text
+     * @return string
+     */
+    public static function italic($text)
+    {
+       return self::colorizeString($text, self::$FOREGROUND_ITALIC); 
+    }
+
+    /**
+     * Underline the foreground of a string
+     *
+     * @param string $text
+     * @return string
+     */
+    public static function underline($text)
+    {
+       return self::colorizeString($text, self::$FOREGROUND_UNDERLINE); 
     }
 
     /**

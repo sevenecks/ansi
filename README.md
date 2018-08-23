@@ -16,6 +16,7 @@ use SevenEcks\Ansi\Colorize;
 
 $test_string = 'This is a test';
 
+echo Colorize::italic($test_string) . "\n";
 echo Colorize::cyan($test_string) . "\n";
 echo Colorize::bgRed($test_string) . "\n";
 // background color first
@@ -45,6 +46,10 @@ There are several colors available for foreground and background.
 
 #### Foreground
 
+Colorize::italic
+Colorize::bold
+Colorize::underline
+Colorize::invert
 Colorize::darkGray
 Colorize::blue
 Colorize::lightBlue
@@ -91,6 +96,10 @@ public static $FOREGROUND_BROWN = '0;33';
 public static $FOREGROUND_YELLOW = '1;33';
 public static $FOREGROUND_LIGHT_GRAY = '0;37';
 public static $FOREGROUND_WHITE = '1;37';
+public static $FOREGROUND_BOLD = '1';
+public static $FOREGROUND_UNDERLINE = '4';
+public static $FOREGROUND_ITALIC = '3'; 
+public static $FOREGROUND_INVERT = '7';
 
 // background colors 
 public static $BACKGROUND_BLACK = '40';
@@ -121,6 +130,38 @@ public function __call($name, $arguments)
 * @return string
 */
 public static function colorizeString($text, $color) 
+
+/**
+ * invert the foreground of a string
+ *
+ * @param string $text
+ * @return string
+ */
+public static function invert($text)
+
+/**
+ * bold the foreground of a string
+ *
+ * @param string $text
+ * @return string
+ */
+public static function bold($text)
+
+/**
+ * Italic the foreground of a string
+ *
+ * @param string $text
+ * @return string
+ */
+public static function italic($text)
+
+/**
+ * Underline the foreground of a string
+ *
+ * @param string $text
+ * @return string
+ */
+public static function underline($text)
 
 /**
 * Colorize the foreground of a string

@@ -1,3 +1,7 @@
+## 1.0.7 - 2018-08-23 4:47PM
+
+- Added invert(), bold(), italic(), and underline() methods
+
 ## 1.0.6 - 2018-03-20 3:49PM
 
 - Removed tests since they were unused
