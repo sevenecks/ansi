@@ -30,7 +30,7 @@ class Colorize implements ColorInterface {
     public static $FOREGROUND_UNDERLINE = '4';
     public static $FOREGROUND_ITALIC = '3'; 
     public static $FOREGROUND_INVERT = '7';
-    public static $FOREGROUND_STRIKETHROUGH = '9';
+    public static $FOREGROUND_STRIKEOUT = '9';
 
     // background colors 
     public static $BACKGROUND_BLACK = '40';
@@ -54,7 +54,10 @@ class Colorize implements ColorInterface {
      */
     public function __call($name, $arguments)
     {
-        return self::$name(...$arguments);
+        if (method_exists(self, $name)) {
+            return self::$name(...$arguments);
+        }
+        throw new \Exception('Method not found');
     }
 
     /**
@@ -87,9 +90,9 @@ class Colorize implements ColorInterface {
      * @param string $text
      * @return string
      */
-    public static function strikethrough($text)
+    public static function strikeout($text)
     {
-       return self::colorizeString($text, self::$FOREGROUND_STRIKETHROUGH);
+       return self::colorizeString($text, self::$FOREGROUND_STRIKEOUT);
     }
 
     /**

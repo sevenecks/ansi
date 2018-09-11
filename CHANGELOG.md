@@ -1,3 +1,7 @@
+## 1.0.9 - 2018-09-11 3:25PM
+
+- renamed to striekout
+
 ## 1.0.8 - 2018-09-11 2:48PM
 
 - added strikethrough (seems to not work on iTerm2)
