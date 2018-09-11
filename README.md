@@ -100,6 +100,7 @@ public static $FOREGROUND_BOLD = '1';
 public static $FOREGROUND_UNDERLINE = '4';
 public static $FOREGROUND_ITALIC = '3'; 
 public static $FOREGROUND_INVERT = '7';
+public static $FOREGROUND_STRIKETHROUGH = '9';
 
 // background colors 
 public static $BACKGROUND_BLACK = '40';
@@ -130,6 +131,14 @@ public function __call($name, $arguments)
 * @return string
 */
 public static function colorizeString($text, $color) 
+
+/**
+ * strikethrough some text 
+ *
+ * @param string $text
+ * @return string
+ */
+public static function strikethrough($text)
 
 /**
  * invert the foreground of a string

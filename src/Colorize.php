@@ -30,6 +30,7 @@ class Colorize implements ColorInterface {
     public static $FOREGROUND_UNDERLINE = '4';
     public static $FOREGROUND_ITALIC = '3'; 
     public static $FOREGROUND_INVERT = '7';
+    public static $FOREGROUND_STRIKETHROUGH = '9';
 
     // background colors 
     public static $BACKGROUND_BLACK = '40';
@@ -78,6 +79,17 @@ class Colorize implements ColorInterface {
     public static function invert($text)
     {
        return self::colorizeString($text, self::$FOREGROUND_INVERT);
+    }
+
+    /**
+     * strikethrough some text 
+     *
+     * @param string $text
+     * @return string
+     */
+    public static function strikethrough($text)
+    {
+       return self::colorizeString($text, self::$FOREGROUND_STRIKETHROUGH);
     }
 
     /**

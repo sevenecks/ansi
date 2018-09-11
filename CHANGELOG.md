@@ -1,3 +1,7 @@
+## 1.0.8 - 2018-09-11 2:48PM
+
+- added strikethrough (seems to not work on iTerm2)
+
 ## 1.0.7 - 2018-08-23 4:47PM
 
 - Added invert(), bold(), italic(), and underline() methods
